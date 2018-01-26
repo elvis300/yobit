@@ -9,7 +9,7 @@ spacing = 30
 x= padding
 shape_width = 20
 top = padding
-raw = top
+
 device = sh1106(port=1, address=0x3C)
 bottom = device.height - padding - 1 
 font = ImageFont.load_default()
@@ -32,7 +32,7 @@ def printer(yo, pair):
 
 def main():
  
-
+  raw = padding	
   printer(yo,"btc_usd")
   printer(yo,"dcr_btc")
   printer(yo,"etc_btc")
