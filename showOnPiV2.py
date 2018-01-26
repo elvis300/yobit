@@ -33,7 +33,7 @@ def printer(draw,yo, pair):
 
 def main():
  
-  while true:
+  while True:
 	with canvas(device) as draw:
 		printer(draw,yo,"btc_usd")
 		printer(draw,yo,"dcr_btc")
