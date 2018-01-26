@@ -18,7 +18,7 @@ def main():
     
   font = ImageFont.load_default()
   device = sh1106(port=1, address=0x3C)
-
+  yo = YoBit() 
   with canvas(device) as draw:
     # Draw some shapes.
     # First define some constants to allow easy resizing of shapes.
@@ -26,18 +26,24 @@ def main():
     x= padding
     shape_width = 20
     top = padding
+    raw = top
     bottom = device.height - padding - 1
     font = ImageFont.load_default()
 
     pair = "dcr_btc"
-    yo = YoBit() 
     last = formated_ticker2(yo,pair)
-    print last
-    print str(last)
+    #print last
 
-    draw.text((x, top),    'decred',  font=font, fill=255)
-    draw.text((x+40 , top), str(last), font=font, fill=255)
 
+    draw.text((x, raw),    'decred',  font=font, fill=255)
+    draw.text((x+40 , raw), str(last), font=font, fill=255)
+    
+    pair = "etc_btc"
+    last = formated_ticker2(yo,pair)
+    x = padding
+    raw = raw + 40
+    draw.text((x, raw),    'ETC',  font=font, fill=255)
+    draw.text((x+40 , raw), str(last), font=font, fill=255)
 
 if __name__ == '__main__':
     main()
