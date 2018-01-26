@@ -3,6 +3,7 @@ from yobit import YoBit
 from oled.device import ssd1306, sh1106
 from oled.render import canvas
 from PIL import ImageFont
+import time
 
 padding = 2
 spacing = 50
@@ -39,7 +40,7 @@ def main():
 		printer(draw,yo,"dcr_btc")
 		printer(draw,yo,"etc_btc")
 		printer(draw,yo,"cme_btc")
-	sleep(5)
+	time.sleep(5)
 
     
 
