@@ -23,34 +23,40 @@ def main():
     # Draw some shapes.
     # First define some constants to allow easy resizing of shapes.
     padding = 2
+    spacing = 20
     x= padding
     shape_width = 20
     top = padding
     raw = top
     bottom = device.height - padding - 1
     font = ImageFont.load_default()
+    
+    pair = "btc_usd"
+    last = formated_ticker2(yo,pair)  
 
+    draw.text((x, raw),    'BTC',  font=font, fill=255)
+    draw.text((x+spacing , raw), str(last), font=font, fill=255)
+    
     pair = "dcr_btc"
     last = formated_ticker2(yo,pair)
-    #print last
-
-
-    draw.text((x, raw),    'decred',  font=font, fill=255)
-    draw.text((x+40 , raw), str(last), font=font, fill=255)
+    x = padding
+    raw = raw + 10
+    draw.text((x, raw),    'DCR',  font=font, fill=255)
+    draw.text((x+spacing , raw), str(last), font=font, fill=255)
     
     pair = "etc_btc"
     last = formated_ticker2(yo,pair)  
     x = padding
     raw = raw + 10
     draw.text((x, raw),    'ETC',  font=font, fill=255)
-    draw.text((x+40 , raw), str(last), font=font, fill=255)
+    draw.text((x+spacing , raw), str(last), font=font, fill=255)
     
     pair = "cme_btc"
     last = formated_ticker2(yo,pair)
     x = padding
     raw = raw + 10
     draw.text((x, raw),    'CME',  font=font, fill=255)
-    draw.text((x+40 , raw), str(last), font=font, fill=255)
+    draw.text((x+spacing , raw), str(last), font=font, fill=255)
 
 if __name__ == '__main__':
     main()
