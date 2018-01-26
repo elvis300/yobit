@@ -22,7 +22,7 @@ def formated_ticker2(yo, pair):
         if key == "last":
             return val
 
-def printer(yo, pair,x, raw ):
+def printer(yo, pair):
 
 	with canvas(device) as draw:
 		lastPrice = formated_ticker2(yo,pair)  
