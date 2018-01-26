@@ -42,7 +42,7 @@ def main():
 		printer(draw,yo,"cme_btc")
 	time.sleep(5)
 	#del draw
-	raw = padding
+	global raw = padding
 
     
 
