@@ -33,11 +33,13 @@ def printer(draw,yo, pair):
 
 def main():
  
-  with canvas(device) as draw:
-    printer(draw,yo,"btc_usd")
-    printer(draw,yo,"dcr_btc")
-    printer(draw,yo,"etc_btc")
-    printer(draw,yo,"cme_btc")
+  while true:
+	with canvas(device) as draw:
+		printer(draw,yo,"btc_usd")
+		printer(draw,yo,"dcr_btc")
+		printer(draw,yo,"etc_btc")
+		printer(draw,yo,"cme_btc")
+	sleep(5)
 
     
 
