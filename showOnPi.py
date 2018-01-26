@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from YoBit import YoBit
+from yobit import YoBit
 from oled.device import ssd1306, sh1106
 from oled.render import canvas
 from PIL import ImageFont
