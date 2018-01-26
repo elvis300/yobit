@@ -41,7 +41,8 @@ def main():
 		printer(draw,yo,"etc_btc")
 		printer(draw,yo,"cme_btc")
 	time.sleep(5)
-	del draw
+	#del draw
+	raw = padding
 
     
 
