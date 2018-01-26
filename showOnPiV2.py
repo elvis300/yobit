@@ -16,7 +16,7 @@ bottom = device.height - padding - 1
 font = ImageFont.load_default()
 yo = YoBit()
 
-def formated_ticker2(yo, pair):
+def formated_ticker2(draw,yo, pair):
     print "formated_ticker with ",pair
     ticker = yo.ticker(pair)
     for key, val in ticker[pair].iteritems():
@@ -34,10 +34,10 @@ def printer(yo, pair):
 def main():
  
   with canvas(device) as draw:
-    printer(yo,"btc_usd")
-    printer(yo,"dcr_btc")
-    printer(yo,"etc_btc")
-    printer(yo,"cme_btc")
+    printer(draw,yo,"btc_usd")
+    printer(draw,yo,"dcr_btc")
+    printer(draw,yo,"etc_btc")
+    printer(draw,yo,"cme_btc")
 
     
 
