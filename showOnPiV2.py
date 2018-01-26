@@ -9,6 +9,7 @@ spacing = 30
 x= padding
 shape_width = 20
 top = padding
+raw = padding	
 
 device = sh1106(port=1, address=0x3C)
 bottom = device.height - padding - 1 
@@ -23,7 +24,7 @@ def formated_ticker2(yo, pair):
             return val
 
 def printer(yo, pair):
-
+	global raw
 	with canvas(device) as draw:
 		lastPrice = formated_ticker2(yo,pair)  
 		draw.text((x, raw),    'BTC',  font=font, fill=255)
@@ -32,16 +33,12 @@ def printer(yo, pair):
 
 def main():
  
-  raw = padding	
+
   printer(yo,"btc_usd")
   printer(yo,"dcr_btc")
   printer(yo,"etc_btc")
   printer(yo,"cme_btc")
-    
-  x = padding
-  raw = raw + 10
-  draw.text((x, raw),    'DCR',  font=font, fill=255)
-  draw.text((x+spacing , raw), str(last), font=font, fill=255)
+
     
 
 if __name__ == '__main__':
