@@ -5,7 +5,7 @@ from oled.render import canvas
 from PIL import ImageFont
 
 padding = 2
-spacing = 30
+spacing = 60
 x= padding
 shape_width = 20
 top = padding
