@@ -7,7 +7,7 @@ from PIL import ImageFont
 
 
 def formated_ticker2(yo, pair):
-    print "in formated_ticker"
+    print "formated_ticker with ",pair
     ticker = yo.ticker(pair)
     for key, val in ticker[pair].iteritems():
         if key == "last":
@@ -29,7 +29,7 @@ def main():
     top = padding
     raw = top
     bottom = device.height - padding - 1
-    font = ImageFont.load_default()
+    
     
     pair = "btc_usd"
     last = formated_ticker2(yo,pair)  
