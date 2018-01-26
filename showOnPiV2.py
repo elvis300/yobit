@@ -25,10 +25,10 @@ def formated_ticker2(yo, pair):
 def printer(yo, pair,x, raw ):
 
 	with canvas(device) as draw:
-		lastPrice = formated_ticker2(yo,pair)  
+	lastPrice = formated_ticker2(yo,pair)  
     	draw.text((x, raw),    'BTC',  font=font, fill=255)
     	draw.text((x+spacing , raw), str(lastPrice), font=font, fill=255)
-		raw = raw + 10
+	raw = raw + 10
 
 def main():
  
