@@ -33,7 +33,7 @@ def printer(draw,yo, pair):
 	raw = raw + 10
 
 def main():
- 
+  global raw
   while True:
 	with canvas(device) as draw:
 		printer(draw,yo,"btc_usd")
@@ -42,7 +42,7 @@ def main():
 		printer(draw,yo,"cme_btc")
 	time.sleep(5)
 	#del draw
-	global raw = padding
+	raw = padding
 
     
 
