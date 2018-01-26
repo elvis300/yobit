@@ -10,9 +10,9 @@ x= padding
 shape_width = 20
 top = padding
 raw = top
+device = sh1106(port=1, address=0x3C)
 bottom = device.height - padding - 1 
 font = ImageFont.load_default()
-device = sh1106(port=1, address=0x3C)
 yo = YoBit()
 
 def formated_ticker2(yo, pair):
