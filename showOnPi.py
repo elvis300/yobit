@@ -41,7 +41,7 @@ def main():
     pair = "etc_btc"
     last = formated_ticker2(yo,pair)
     x = padding
-    raw = raw + 40
+    raw = raw + 20
     draw.text((x, raw),    'ETC',  font=font, fill=255)
     draw.text((x+40 , raw), str(last), font=font, fill=255)
 
