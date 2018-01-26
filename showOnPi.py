@@ -39,10 +39,17 @@ def main():
     draw.text((x+40 , raw), str(last), font=font, fill=255)
     
     pair = "etc_btc"
+    last = formated_ticker2(yo,pair)  
+    x = padding
+    raw = raw + 10
+    draw.text((x, raw),    'ETC',  font=font, fill=255)
+    draw.text((x+40 , raw), str(last), font=font, fill=255)
+    
+    pair = "cme_btc"
     last = formated_ticker2(yo,pair)
     x = padding
-    raw = raw + 20
-    draw.text((x, raw),    'ETC',  font=font, fill=255)
+    raw = raw + 10
+    draw.text((x, raw),    'CME',  font=font, fill=255)
     draw.text((x+40 , raw), str(last), font=font, fill=255)
 
 if __name__ == '__main__':
