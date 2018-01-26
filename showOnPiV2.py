@@ -16,14 +16,14 @@ bottom = device.height - padding - 1
 font = ImageFont.load_default()
 yo = YoBit()
 
-def formated_ticker2(draw,yo, pair):
+def formated_ticker2(yo, pair):
     print "formated_ticker with ",pair
     ticker = yo.ticker(pair)
     for key, val in ticker[pair].iteritems():
         if key == "last":
             return val
 
-def printer(yo, pair):
+def printer(draw,yo, pair):
 	global raw
 	
 	lastPrice = formated_ticker2(yo,pair)  
